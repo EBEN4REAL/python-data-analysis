@@ -280,3 +280,35 @@ print(sq_list)
 
 sq_iterator = (x**2 for x in range(10))  # this produces an iterator of squares
 print(list(sq_iterator))
+
+how_many_snakes = 1
+snake_string = """
+Welcome to Python3!
+
+             ____
+            / . .\
+            \  ---<
+             \  /
+   __________/ /
+-=:___________/
+
+<3, Juno
+"""
+
+
+print(snake_string * how_many_snakes)
+
+
+
+def party_planner(cookies, people):
+    leftovers = None
+    num_each = None
+
+    try:
+        num_each = cookies // people
+        leftovers = cookies % people
+    except ZeroDivisionError:
+        print("Oops, you entered 0 people will be attending.")
+        print("Please enter a good number of people for a party.")
+
+    return(num_each, leftovers)
